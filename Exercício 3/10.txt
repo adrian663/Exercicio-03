@@ -1,0 +1,29 @@
+10.Desenvolver um programa que some os valores de multas que o Detran aplicou em 1 dia
+(Use uma lista com valores sortidos).  E mostre a quantidade de multas de acordo com a
+tabela de pontos: 7 pontos (valor até 500), 14 pontos (valor de 501 a 1000) e 21 pontos (acima de 1000 reais)
+
+
+void main() {
+  List<int> pontos = [7,21,7,7,14,21,21,14,7];
+    
+  int contador7 = 0;
+  int contador14 = 0;
+  int contador21 = 0;
+  
+  for (int i = 0; i < 9; i++) {
+    
+    if(pontos[i] == 7){
+    contador7 = contador7 + 1;
+    }else if(pontos[i] == 14){
+      contador14 = contador14 + 1;
+    }else{
+      contador21 = contador21 +1;
+    }
+    
+  }
+  
+  print("Possui ao total $contador7 multas de 7 pontos");
+  print("Possui ao total $contador14 multas de 14 pontos");
+  print("Possui ao total $contador21 multas de 21 pontos");
+ 
+}
